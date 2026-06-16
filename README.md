@@ -68,7 +68,13 @@ The California Housing dataset contains **20,640 rows** and the following featur
 | `Longitude` | Block group longitude |
 | `MedHouseVal` | **Target**: Median house value (in $100,000s) |
 
-### 2. Business & Feature Interpretation
+### 2. Feature Selection Performance
+
+![Feature Selection Performance](feature_selection_performance_allinone.png)
+
+The chart compares 9 feature selection algorithms (Pearson, Spearman, F-test, Mutual Info, RFE, SFS, SBS, Lasso, Random Forest) across stepwise subset sizes, showing Test R² and Test MSE curves to identify the optimal feature count.
+
+### 3. Business & Feature Interpretation
 - **MedInc (Median Income)** has the largest positive impact: higher income neighborhoods command significantly higher house values.
 - **Latitude / Longitude** capture geographic effects, reflecting California's coastal premium and regional price disparities.
 - **AveOccup (Average Occupancy)** has a negative impact: higher occupancy per household is associated with lower property values.
