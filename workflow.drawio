@@ -1,0 +1,50 @@
+<mxfile host="Electron" modified="2026-06-11T03:00:00.000Z" agent="5.0" version="20.0.0" type="device">
+  <diagram id="workflow" name="CRISP-DM Workflow">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="step1" value="1. Business Understanding&#xa;(Objective: Predict Profit)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="step2" value="2. Data Understanding&#xa;(EDA &amp; data.csv checks)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="step3" value="3. Data Preparation&#xa;(One-Hot Encoding, Split)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="step4" value="4. Modeling&#xa;(Compare 4 feature sets)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="step5" value="5. Evaluation&#xa;(5-Fold CV: Select Model 2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="450" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="step6" value="6. Deployment&#xa;(Serialize startup_profit_model_v2.pkl)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="step1" target="step2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="step2" target="step3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="step3" target="step4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="step4" target="step5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="step5" target="step6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_loop" value="Loop Back (If overfitting)" edge="1" parent="1" source="step5" target="step3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;dashed=1;strokeColor=#FF0000;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="320" as="sourcePoint" />
+            <mxPoint x="80" y="220" as="targetPoint" />
+            <Array points="60;480;60;280" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
